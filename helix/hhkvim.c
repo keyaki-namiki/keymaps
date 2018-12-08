@@ -60,26 +60,26 @@ enum macro_keycodes {
 #if HELIX_ROWS == 5
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-		/* Qwerty
-		* ,-----------------------------------------.             ,-----------------------------------------.
-		* | Esc  |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  |  `   |
-		* |------+------+------+------+------+------|             |------+------+------+------+------+------|
-		* | Tab  |   Q  |   W  |   E  |   R  |   T  |             |   Y  |   U  |   I  |   O  |   P  | Bksp |
-		* |------+------+------+------+------+------|             |------+------+------+------+------+------|
-		* | Ctrl |   A  |   S  |   D  |   F  |   G  |             |   H  |   J  |   K  |   L  |   ;  |  '   |
-		* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-		* | Shift|   Z  |   X  |   C  |   V  |   B  |   [  |   ]  |   N  |   M  |   ,  |   .  |   /  | Alt  |
-		* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-		* |      |      | Alt  | GUI  | Shift| Lower| Space| Bksp |Raise | Enter| Shift|      |      |      |
-		* `-------------------------------------------------------------------------------------------------'
-		*/
+	/* Qwerty
+	* ,-----------------------------------------.             ,-----------------------------------------.
+	* | Esc  |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  |  `   |
+	* |------+------+------+------+------+------|             |------+------+------+------+------+------|
+	* | Tab  |   Q  |   W  |   E  |   R  |   T  |             |   Y  |   U  |   I  |   O  |   P  | Bksp |
+	* |------+------+------+------+------+------|             |------+------+------+------+------+------|
+	* | Ctrl |   A  |   S  |   D  |   F  |   G  |             |   H  |   J  |   K  |   L  |   ;  |  '   |
+	* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	* | Shift|   Z  |   X  |   C  |   V  |   B  |   [  |   ]  |   N  |   M  |   ,  |   .  |   /  | Alt  |
+	* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	* |      |      | Alt  | GUI  | Shift| Lower| Space| Bksp |Raise | Enter| Shift|      |      |      |
+	* `-------------------------------------------------------------------------------------------------'
+	*/
 	[_QWERTY] = LAYOUT( \
-			KC_ESC,	KC_1,	KC_2,	KC_3,	KC_4,	KC_5,					KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	KC_GRV, \
-			KC_TAB,	KC_Q,	KC_W,	KC_E,	KC_R,	KC_T,					KC_Y,	KC_U,	KC_I,	KC_O,	KC_P,	KC_BSPC, \
-			KC_LCTL,KC_A,	KC_S,	KC_D,	KC_F,	KC_G,					KC_H,	KC_J,	KC_K,	KC_L,	KC_SCLN,KC_QUOT, \
-			KC_LSFT,KC_Z,	KC_X,	KC_C,	KC_V,	KC_B,	KC_LBRC,KC_RBRC,KC_N,	KC_M,	KC_COMM,KC_DOT,	KC_SLSH,KC_RALT , \
-			XXXXXXX,XXXXXXX,KC_LALT,KC_LGUI,KC_LSFT,LOWER,	KC_SPC,	KC_BSPC,RAISE,	KC_ENT,	KC_RSFT,XXXXXXX,XXXXXXX,XXXXXXX \
-			),
+		KC_ESC,	KC_1,	KC_2,	KC_3,	KC_4,	KC_5,                   KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	KC_GRV, \
+		KC_TAB,	KC_Q,	KC_W,	KC_E,	KC_R,	KC_T,                   KC_Y,	KC_U,	KC_I,	KC_O,	KC_P,	KC_BSPC, \
+		KC_LCTL,KC_A,	KC_S,	KC_D,	KC_F,	KC_G,                   KC_H,	KC_J,	KC_K,	KC_L,	KC_SCLN,KC_QUOT, \
+		KC_LSFT,KC_Z,	KC_X,	KC_C,	KC_V,	KC_B,	KC_LBRC,KC_RBRC,KC_N,	KC_M,	KC_COMM,KC_DOT,	KC_SLSH,KC_RALT , \
+		XXXXXXX,XXXXXXX,KC_LALT,KC_LGUI,KC_LSFT,LOWER,	KC_SPC,	KC_BSPC,RAISE,	KC_ENT,	KC_RSFT,XXXXXXX,XXXXXXX,XXXXXXX \
+		),
 
 	/* Colemak
 	 * ,-----------------------------------------.             ,-----------------------------------------.
@@ -95,12 +95,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * `-------------------------------------------------------------------------------------------------'
 	 */
 	[_COLEMAK] = LAYOUT( \
-			KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL, \
-			KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,                      KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC, \
-			KC_LCTL, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                      KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT, \
-			KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC, KC_RBRC, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
-			ADJUST,  KC_ESC,  KC_LALT, KC_LGUI, EISU,    LOWER,   KC_SPC,  KC_SPC,  RAISE,   KANA,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
-			),
+		KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL, \
+		KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,                      KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC, \
+		KC_LCTL, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,                      KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT, \
+		KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC, KC_RBRC, KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT , \
+		ADJUST,  KC_ESC,  KC_LALT, KC_LGUI, EISU,    LOWER,   KC_SPC,  KC_SPC,  RAISE,   KANA,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
+		),
 
 	/* Dvorak
 	 * ,-----------------------------------------.             ,-----------------------------------------.
@@ -116,54 +116,54 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * `-------------------------------------------------------------------------------------------------'
 	 */
 	[_DVORAK] = LAYOUT( \
-			KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
-			KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                      KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_DEL, \
-			KC_LCTL, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                      KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_SLSH, \
-			KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_LBRC, KC_RBRC, KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_ENT , \
-			ADJUST,  KC_ESC,  KC_LALT, KC_LGUI, EISU,    LOWER,   KC_SPC,  KC_SPC,  RAISE,   KANA,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
-			),
+		KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+		KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                      KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_DEL, \
+		KC_LCTL, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,                      KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_SLSH, \
+		KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_LBRC, KC_RBRC, KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_ENT , \
+		ADJUST,  KC_ESC,  KC_LALT, KC_LGUI, EISU,    LOWER,   KC_SPC,  KC_SPC,  RAISE,   KANA,    KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
+		),
 
-			/* Lower
-		* ,-----------------------------------------.             ,-----------------------------------------.
-		* |  f1  |  f2  |  f3  |  f4  |  f5  |  f6  |             |  f7  |  f8  |  f9  |  f10 |  f11 |  f12 |
-		* |------+------+------+------+------+------|             |------+------+------+------+------+------|
-		* |      |      |      |      |      |      |             |      |      |      |enter |      |      |
-		* |------+------+------+------+------+------|             |------+------+------+------+------+------|
-		* |      |      | ins  | del  |      |      |             | left | down |  up  |right | Vol+ |      |
-		* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-		* |      |      | bksp |      |enter |      |      |      | Home | PgDn | PgUp | End  | Vol- |      |
-		* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-		* |      |      |      |      |      |      |      |  del |      |      |      | Play | Next |      |
-		* `-------------------------------------------------------------------------------------------------'
-		*/
+	/* Lower
+	* ,-----------------------------------------.             ,-----------------------------------------.
+	* |  f1  |  f2  |  f3  |  f4  |  f5  |  f6  |             |  f7  |  f8  |  f9  |  f10 |  f11 |  f12 |
+	* |------+------+------+------+------+------|             |------+------+------+------+------+------|
+	* |      |      |      |      |      |      |             |      |      |      |enter |      |      |
+	* |------+------+------+------+------+------|             |------+------+------+------+------+------|
+	* |      |      | ins  | del  |      |      |             | left | down |  up  |right | Vol+ |      |
+	* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	* |      |      | bksp |      |enter |      |      |      | Home | PgDn | PgUp | End  | Vol- |      |
+	* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	* |      |      |      |      |      |      |      |  del |      |      |      | Play | Next |      |
+	* `-------------------------------------------------------------------------------------------------'
+	*/
 	[_LOWER] = LAYOUT( \
-			KC_F1,	KC_F2,	KC_F3,	KC_F4,	KC_F5,	KC_F6,					KC_F7,	KC_F8,	KC_F9,	KC_F10,	KC_F11,	KC_F12, \
-			_______,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,				XXXXXXX,XXXXXXX,XXXXXXX,KC_ENT,	XXXXXXX,_______, \
-			_______,XXXXXXX,KC_INS,KC_DEL,	XXXXXXX,XXXXXXX,				KC_LEFT,KC_DOWN,KC_UP,	KC_RGHT,KC_VOLU,_______, \
-			_______,XXXXXXX,KC_BSPC,XXXXXXX,KC_ENT,	XXXXXXX,XXXXXXX,XXXXXXX,KC_HOME,KC_PGDN,KC_PGUP,KC_END,	KC_VOLD,_______, \
-			_______,_______,_______,_______,_______,_______,_______,KC_DEL,	_______,_______,_______,KC_MPLY,KC_MNXT,_______ \
-			),	
+		KC_F1,	KC_F2,	KC_F3,	KC_F4,	KC_F5,	KC_F6,                  KC_F7,	KC_F8,	KC_F9,	KC_F10,	KC_F11,	KC_F12, \
+		_______,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,                XXXXXXX,XXXXXXX,XXXXXXX,KC_ENT,	XXXXXXX,_______, \
+		_______,XXXXXXX,KC_INS,KC_DEL,	XXXXXXX,XXXXXXX,                KC_LEFT,KC_DOWN,KC_UP,	KC_RGHT,KC_VOLU,_______, \
+		_______,XXXXXXX,KC_BSPC,XXXXXXX,KC_ENT,	XXXXXXX,XXXXXXX,XXXXXXX,KC_HOME,KC_PGDN,KC_PGUP,KC_END,	KC_VOLD,_______, \
+		_______,_______,_______,_______,_______,_______,_______,KC_DEL,	_______,_______,_______,KC_MPLY,KC_MNXT,_______ \
+		),	
 
-		/* Raise
-				* ,-----------------------------------------.             ,-----------------------------------------.
-				* |      |      |      |      |      |      |             |      |      |      |      |      |      |
-				* |------+------+------+------+------+------|             |------+------+------+------+------+------|
-				* |      |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  | Del  |
-				* |------+------+------+------+------+------|             |------+------+------+------+------+------|
-				* |      |   4  |   5  |   6  |  .   |      |             |  [   |  -   |   =  |   \  |  (   |   )  |
-				* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
-				* |      |   7  |   8  |   9  |  0   |      |      |      |  ]   |      |      |      |shift |      |
-				* |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-				* |      |      |      |      |      |      | tab  |      |      |      |      |      |      |      |
-				* `-------------------------------------------------------------------------------------------------'
-				*/
+	/* Raise
+	* ,-----------------------------------------.             ,-----------------------------------------.
+	* |      |      |      |      |      |      |             |      |      |      |      |      |      |
+	* |------+------+------+------+------+------|             |------+------+------+------+------+------|
+	* |      |   1  |   2  |   3  |   4  |   5  |             |   6  |   7  |   8  |   9  |   0  | Del  |
+	* |------+------+------+------+------+------|             |------+------+------+------+------+------|
+	* |      |   4  |   5  |   6  |  .   |      |             |  [   |  -   |   =  |   \  |  (   |   )  |
+	* |------+------+------+------+------+------+------+------+------+------+------+------+------+------|
+	* |      |   7  |   8  |   9  |  0   |      |      |      |  ]   |      |      |      |shift |      |
+	* |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
+	* |      |      |      |      |      |      | tab  |      |      |      |      |      |      |      |
+	* `-------------------------------------------------------------------------------------------------'
+	*/
 	[_RAISE] = LAYOUT( \
-			_______,_______,_______,_______,_______,_______,				_______,_______,_______,_______,_______,_______, \
-			_______,KC_1,	KC_2,	KC_3,	KC_4,	KC_5,					KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	KC_DEL, \
-			_______,KC_4,	KC_5,	KC_6,	KC_DOT,	XXXXXXX,				KC_LBRC,KC_MINS,KC_EQL,	KC_BSLS,KC_LPRN,KC_RPRN, \
-			_______,KC_7,	KC_8,	KC_9,	KC_0,	XXXXXXX,_______,_______,KC_RBRC,XXXXXXX,XXXXXXX,XXXXXXX,KC_RSFT,XXXXXXX, \
-			_______,_______,_______,_______,_______,_______,KC_TAB,	_______,_______,_______,_______,_______,_______,_______ \
-			),
+		_______,_______,_______,_______,_______,_______,                _______,_______,_______,_______,_______,_______, \
+		_______,KC_1,	KC_2,	KC_3,	KC_4,	KC_5,                   KC_6,	KC_7,	KC_8,	KC_9,	KC_0,	KC_DEL, \
+		_______,KC_4,	KC_5,	KC_6,	KC_DOT,	XXXXXXX,                KC_LBRC,KC_MINS,KC_EQL,	KC_BSLS,KC_LPRN,KC_RPRN, \
+		_______,KC_7,	KC_8,	KC_9,	KC_0,	XXXXXXX,_______,_______,KC_RBRC,XXXXXXX,XXXXXXX,XXXXXXX,KC_RSFT,XXXXXXX, \
+		_______,_______,_______,_______,_______,_______,KC_TAB,	_______,_______,_______,_______,_______,_______,_______ \
+		),
 
 	/* Adjust (Lower + Raise)
 	 * ,-----------------------------------------.             ,-----------------------------------------.
@@ -179,12 +179,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	 * `-------------------------------------------------------------------------------------------------'
 	 */
 	[_ADJUST] =  LAYOUT( \
-			KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
-			_______, RESET,   RGBRST,  XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, KC_DEL, \
-			_______, XXXXXXX, XXXXXXX, AU_ON,   AU_OFF,  AG_NORM,                   AG_SWAP, QWERTY,  COLEMAK, DVORAK,  XXXXXXX, _______, \
-			_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, \
-			_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD \
-			)
+		KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
+		_______, RESET,   RGBRST,  XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, KC_PSCR, XXXXXXX, XXXXXXX, KC_DEL, \
+		_______, XXXXXXX, XXXXXXX, AU_ON,   AU_OFF,  AG_NORM,                   AG_SWAP, QWERTY,  COLEMAK, DVORAK,  XXXXXXX, _______, \
+		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, XXXXXXX, XXXXXXX, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, \
+		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD \
+		)
 };
 
 #elif HELIX_ROWS == 4
